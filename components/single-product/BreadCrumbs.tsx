@@ -35,3 +35,5 @@ function BreadCrumbs({ name }: { name: string }) {
     </Breadcrumb>
   );
 }
+
+export default BreadCrumbs;

@@ -1,4 +1,4 @@
-import db from '@/utils/db'
+// import db from '@/utils/db'
 // We turned this function into async, since everytime we will communicate with the database,
 // the queries are going to be synchronous.
 // We only have the static content

@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import { Button } from "../ui/button";
+import { Button } from '@/components/ui/button';
 import { LuShoppingCart } from 'react-icons/lu';
-import { fetchCartItems } from '@/utils/actions';
+import Link from 'next/link';
 
 async function cartButton() {
   // temp 
