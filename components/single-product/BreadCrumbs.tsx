@@ -13,6 +13,7 @@ import {
 // Then we have a list 
 // Each item we will place in the BreasdCrumb item component
 function BreadCrumbs({ name }: { name: string }) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return (
     <Breadcrumb>
       <BreadcrumbList>

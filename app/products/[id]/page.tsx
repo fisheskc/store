@@ -8,12 +8,13 @@ import ProductRating from '@/components/single-product/ProductRating';
 
 // Since this is dynamic, we have access to the param in the params prop.
 // The type will be the params & we will set it equal to an object
-async function SingleProductPage({params}:{params:{id:string}}) {
+async function SingleProductPage({ params }: { params: Promise<{ id: string }> }) {
+    const  {id } = await params;
     // This is what we will pass into the fetch single product
-    const product = await fetchSingleProduct(params.id)
+    const product = await fetchSingleProduct(id);
     const { name, image, company, description, price } = product;
     // This is a helper function
-    const dollarsAmount = formatCurrency(price)
+    const dollarsAmount = formatCurrency(price);
     // The BreadCrumbs are looking for the name
   return (
     <section>
@@ -27,15 +28,15 @@ async function SingleProductPage({params}:{params:{id:string}}) {
             <div>
                 <div className='flex gap-x-8 items-center'>
                     <h1 className='capitalize text-3x1 font-bold'>{name}</h1>
-                    <FavoriteToggleButton productId={params.id} />
+                    <FavoriteToggleButton productId={id} />
                 </div>
-                <ProductRating productId={params.id} />
+                <ProductRating productId={id} />
                 <h4 className='text-xl mt-2'>{company}</h4>
                 <p className='mt-3 text-md bg-muted inline-block p-2 rounded-md'>
                     {dollarsAmount}
                 </p>
                 <p className='mt-6 leading-8 text-muted-foreground'>{description}</p>
-                <AddToCart productId={params.id} />
+                <AddToCart productId={id} />
             </div>
         </div>
     </section>

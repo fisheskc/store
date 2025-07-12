@@ -40,7 +40,7 @@ function NavSearch() {
     // The last thing is to set the state value back to empty, if we have no value in the searchParams
     // We will do that with the useEffect hook
     replace(`/products?${params.toString()}`)
-  },500)
+  },300)
 
   // We also want to provide the dependency array & we wamt to run this each & everytime there is going to be some change in the search query params
   useEffect(() => {
