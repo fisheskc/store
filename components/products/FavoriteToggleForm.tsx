@@ -1,7 +1,7 @@
 function FavoriteToggleForm() {
   return (
     <div>
-      
+      FavoriteToggleForm
     </div>
   )
 }

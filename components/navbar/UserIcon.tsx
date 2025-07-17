@@ -1,6 +1,6 @@
 // changed LuUser2 to LuUser
 import { LuUser } from 'react-icons/lu';
-import {currentUser } from '@clerk/nextjs/server'
+import { currentUser } from '@clerk/nextjs/server'
 
 // This function is going to return all of the info on the currentUser
 // If the user has not logged in, remember we display that navbar in the public pages as well,

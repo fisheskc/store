@@ -17,4 +17,3 @@ export const config = {
     // Always run for API routes
      matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
 };
-   
