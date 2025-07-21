@@ -21,7 +21,7 @@ function SignOutLink() {
   // We want to navigate to the homepage
   // This will be rendered in the links dropdown
   // This is the moment we click on a logout, we also display the toast
-  return (
+   return (
     <SignOutButton redirectUrl='/'>
       <button>
          <Link href='/' className="w-full text-left" onClick={handleLogout}>
