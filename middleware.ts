@@ -1,4 +1,5 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { NextResponse } from 'next/server';
 
 // This is the case where we define our public route
 const isPublicRoute = createRouteMatcher(['/','/products(.*)','/about'])
