@@ -26,7 +26,7 @@ export default clerkMiddleware(async (auth, req) => {
   // These are going to be public routes
   // We will actually look for the routes that are not in our createRouteMatcher
   if (!isPublicRoute(req)) {
-    auth.protect(); // Protect the route if it matches the defined criteria
+    auth().protect(); // Protect the route if it matches the defined criteria
   }
 });
 
