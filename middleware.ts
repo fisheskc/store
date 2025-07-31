@@ -14,8 +14,8 @@ export default clerkMiddleware((auth, req) => {
   // if this true, it means user is admin user
   // If not, means user is regular user & user is not an admin user
   // const { userId } = await auth();
-  //  const { userId } = await auth();
-  const isAdminUser = userId === process.env.ADMIN_USER_ID;
+    
+  const isAdminUser = auth().userId === process.env.ADMIN_USER_ID;
 
   // If the user is trying to access the admin route. In that case, we redirect the user back
   if (isAdminRoute(req) && !isAdminUser) {
