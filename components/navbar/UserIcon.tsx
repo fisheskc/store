@@ -1,6 +1,7 @@
 // changed LuUser2 to LuUser
 import { LuUser } from "react-icons/lu";
 import { currentUser } from "@clerk/nextjs/server";
+import Image from "next/image";
 
 // This function is going to return all of the info on the currentUser
 // If the user has not logged in, remember we display that navbar in the public pages as well,
@@ -28,17 +29,13 @@ async function UserIcon() {
   // So we use the default, if the user has not signed in
   if (profileImage) {
     return (
-      <img src={profileImage} className="w-6 h-6 rounded-full object-cover" />
+      <Image src={profileImage} className="w-6 h-6 rounded-full object-cover" alt="" />
     );
 
     // If the user has not logged in, we return our icon
   }
-  return <LuUser className="w-6 h6 bg-primary rounded-full text-white" />;
-  if (profileImage) {
-    return (
-      <img src={profileImage} className="w-6 h-6 rounded-full object-cover" />
-    );
-  }
+  
+  
   // If the user has not logged in, we return our icon
   return <LuUser className="w-6 h6 bg-primary rounded-full text-white" />;
 }
