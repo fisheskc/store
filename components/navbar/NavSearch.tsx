@@ -5,7 +5,7 @@ import { useDebouncedCallback } from 'use-debounce';
 import { useState, useEffect } from 'react';
 
 function NavSearch() {
-  const searchParams =  useSearchParams();
+  const searchParams = useSearchParams();
   // replace is what we are getting back from useRouter
   const {replace} = useRouter()
   // We want construct the state value. We Will have a controlled input
@@ -18,6 +18,8 @@ function NavSearch() {
   // We access the event, since in the event target value, we will have the input value
   // onChange - we want invoke two things, first we want to invoke the setSearch, which is going to control the state value.
   // We want to pass in the event.target & then the value. It will actuallty navigate to the products & provide the correct query params
+  // console.log("searchParams")
+  // console.log(searchParams.get('search'))
   const [search, setSearch] = useState(searchParams.get('search')?.toString() || '')
   // We want to run this particular useDebouncedCallback funtion with some delay
   // useDebouncedCallback is looking for two things, a function we want to invoke & the second one is going to be the time 
@@ -48,7 +50,8 @@ function NavSearch() {
      if(!searchParams.get('search')) {
         setSearch('')
      }
-  },[searchParams.get('search')])
+  // },[searchParams.get('search')])
+   },[searchParams])
 
   return (
     <Input

@@ -1,6 +1,7 @@
 import ProductsContainer from '@/components/products/ProductsContainer';
-async function ProductsPage({searchParams}:{ searchParams: Promise <{ layout?: string; search?: string }>;}) {
-  
+async function ProductsPage(props:{ searchParams: Promise <{ layout?: string; search?: string }>;}) {
+  const searchParams = await props.searchParams;
+
   const params = await searchParams
   // if it is not present, we have a default value
   const layout = params.layout ?? 'grid';
