@@ -7,9 +7,7 @@ function AboutPage() {
           store
         </span>
       </h1>
-       <p className='mt-6 text-lg tracking-wide leading-8 max-w-2xl mx-auto text-muted-foreground'>
-        Lorem ipsum dolor
-      </p>
+      
      </section>
   )
 }
