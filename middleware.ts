@@ -2,8 +2,8 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 // This is the case where we define our public route
-// const isPublicRoute = createRouteMatcher(['/', '/products(.*)', '/about']);
-const isPublicRoute = createRouteMatcher(['/', '/products(.*)']);
+const isPublicRoute = createRouteMatcher(['/', '/products(.*)', '/about']);
+// const isPublicRoute = createRouteMatcher(['/', '/products(.*)']);
 // This is going to be the admin route
 // Since we a have a nested structure, we want to use admin & then all of the pages,
 // & inorder  to restrict access to all of the pages, so admin/sales, products, essentially all of them
